@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .container {
   max-width: 1100px;
   margin: auto;
@@ -11,6 +14,22 @@
   left: 0;
   width: 100%;
 }
+.hamburguesa {
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+  display: inline-block;
+}
+.linea {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 7px 0;
+}
+
+.menu-mobile {
+  display: none;
+}
 .menu .left {
   width: 50%;
   text-align: center;
@@ -19,7 +38,7 @@
   width: 50%;
   text-align: right;
 }
-.menu .right div {
+.menu-desktop .right div {
   display: inline-block;
   color: white;
   cursor: pointer;
@@ -377,4 +396,111 @@
 .footer a {
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu-desktop {
+    display: none;
+  }
+  .menu-mobile {
+    display: flex;
+  }
+  .menu .right {
+    padding-right: 20px;
+  }
+  .menu .logo {
+    width: 134px;
+  }
+  .servicios .servicio {
+    display: block;
+    padding: 20px;
+  }
+  .header {
+    padding: 80px 40px;
+  }
+  .header .texto-2 {
+    font-size: 2em;
+  }
+  .servicios .servicio .derecha {
+    width: 100%;
+  }
+  .servicios .servicio .izquierda {
+    width: 60%;
+    padding: 0;
+  }
+  .paquetes-info {
+    display: block;
+  }
+  .paquetes .paquete {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .cajas-proyectos {
+    display: block;
+    padding: 20px;
+  }
+  .proyectos .cajas-proyectos .caja-izquierda {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .proyectos .cajas-proyectos .caja-derecha {
+    width: 100%;
+  }
+  .nosotros-cajas .caja-derecha {
+    width: 100%;
+  }
+  .nosotros-cajas {
+    display: block;
+  }
+  .nosotros-cajas .caja-izquierda {
+    width: 70%;
+  }
+  .clientes .caja-clientes {
+    display: block;
+  }
+  .clientes .caja-izquierda {
+    width: 100%;
+  }
+  .clientes .caja-derecha {
+    width: 100%;
+  }
+  .caja-contacto {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+  .contacto .caja-contacto .caja-izquierda {
+    width: 100%;
+    padding: 0;
+  }
+  .contacto form {
+    width: 80%;
+    margin: auto;
+  }
+  .contacto .caja-contacto .caja-derecha {
+    width: 100%;
+  }
+  .contacto .boton {
+    text-align: center;
+  }
+  .caja-icons {
+    display: block;
+    padding: 40px;
+  }
+  .footer {
+    width: 100%;
+  }
+  .caja-icons .caja-izquierda {
+    width: 100%;
+    padding: 0;
+  }
+  .caja-icons .caja-centro {
+    width: 100%;
+    padding: 0;
+  }
+  .caja-icons .caja-derecha {
+    width: 100%;
+    padding: 0;
+  }
 }
