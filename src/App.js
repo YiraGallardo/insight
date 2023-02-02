@@ -1,5 +1,6 @@
 import "./App.css";
 import Desplegable from "./components/Desplegable";
+import Fade from "react-reveal/Fade";
 
 const SERVICIOS_MARKETING = [
   {
@@ -135,131 +136,158 @@ function App() {
           <div className="logo">
             <img src="img/logo.png" alt="img" />
           </div>
-        </div> <div className="right"> <div className="hamburguesa"> <div className="linea"></div> <div className="linea"></div>
+        </div>{" "}
+        <div className="right">
+          {" "}
+          <div className="hamburguesa">
+            {" "}
+            <div className="linea"></div> <div className="linea"></div>
             <div className="linea"></div>
           </div>
         </div>
       </div>
       <div className="header">
         <div className="container">
-          <div className="texto">
-            Agencia 360° especializada en marketing, contenido y diseño digital
-          </div>
-          <div className="texto-2">
-            Nuestro objetivo es ofrecer soluciones<br></br>
-            tangibles que reflejen un retorno de<br></br>
-            inversión a corto plazo.
-          </div>
+          <Fade left>
+            <div className="texto">
+              Agencia 360° especializada en marketing, contenido y diseño
+              digital
+            </div>
+          </Fade>
+          <Fade left>
+            <div className="texto-2">
+              Nuestro objetivo es ofrecer soluciones<br></br>
+              tangibles que reflejen un retorno de<br></br>
+              inversión a corto plazo.
+            </div>
+          </Fade>
           <div className="boton">
-            <button onClick={goToContacto}>CONTÁCTANOS</button>
+            <Fade right>
+              <button onClick={goToContacto}>CONTÁCTANOS</button>
+            </Fade>
           </div>
         </div>
       </div>
       <div className="servicios" id="servicios">
         <div className="titulo">
-          <div className="container">SERVICIOS</div>
+          <Fade right>
+            <div className="container">SERVICIOS</div>
+          </Fade>
         </div>
         <div className="contenido">
           <div className="container">
             <div className="servicio">
               <div className="izquierda">
-                <div className="nombre">Marketing Digital</div>
-                <div className="boton-2">
-                  <button onClick={goToContacto}>CONTÁCTANOS</button>
-                </div>
+                <Fade right>
+                  <div className="nombre">Marketing Digital</div>
+                  <div className="boton-2">
+                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+                  </div>
+                </Fade>
               </div>
               <div className="derecha">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore dolore magna aliqua. Etiam
-                  suscipit auctor cursus. Sed tempus elit vel dui scelerisque
-                  dignissim. Aenean ut urna et lorem vestibulum dignissim.
-                  Suspendisse pretium purus feugiat, posuere augue in,
-                  condimentum justo. Integer imperdiet nunc condimentum
-                  consequat consequat.
-                </p>
-                <p>
-                  <b>Impulsamos tu negocio a través de:</b>
-                </p>
-
-                <div className="desplegables">
-                  {SERVICIOS_MARKETING.map((servicio) => (
-                    <Desplegable
-                      key={servicio.key}
-                      id={servicio.id}
-                      titulo={servicio.titulo}
-                      texto={servicio.texto}
-                    />
-                  ))}
-                </div>
+                <Fade right>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    Etiam suscipit auctor cursus. Sed tempus elit vel dui
+                    scelerisque dignissim. Aenean ut urna et lorem vestibulum
+                    dignissim. Suspendisse pretium purus feugiat, posuere augue
+                    in, condimentum justo. Integer imperdiet nunc condimentum
+                    consequat consequat.
+                  </p>
+                  <p>
+                    <b>Impulsamos tu negocio a través de:</b>
+                  </p>
+                  <div className="desplegables">
+                    <Fade left>
+                      {SERVICIOS_MARKETING.map((servicio) => (
+                        <Desplegable
+                          key={servicio.key}
+                          id={servicio.id}
+                          titulo={servicio.titulo}
+                          texto={servicio.texto}
+                        />
+                      ))}
+                    </Fade>
+                  </div>
+                </Fade>
               </div>
             </div>
             <div className="servicio">
-              <div className="izquierda">
-                <div className="nombre">Producción Audiovisual</div>
-                <div className="boton-2">
-                  <button onClick={goToContacto}>CONTÁCTANOS</button>
+              <Fade left>
+                <div className="izquierda">
+                  <div className="nombre">Producción Audiovisual</div>
+                  <div className="boton-2">
+                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+                  </div>
                 </div>
-              </div>
-              <div className="derecha">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore dolore magna aliqua. Etiam
-                  suscipit auctor cursus. Sed tempus elit vel dui scelerisque
-                  dignissim. Aenean ut urna et lorem vestibulum dignissim.
-                  Suspendisse pretium purus feugiat, posuere augue in,
-                  condimentum justo. Integer imperdiet nunc condimentum
-                  consequat consequat.
-                </p>
-                <p>
-                  <b>Impulsamos tu negocio a través de:</b>
-                </p>
-                <div className="desplegables">
-                  {SERVICIOS_AUDIOVISUAL.map((servicio) => (
-                    <Desplegable
-                      key={servicio.key}
-                      id={servicio.id}
-                      titulo={servicio.titulo}
-                      texto={servicio.texto}
-                    />
-                  ))}
+                <div className="derecha">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    Etiam suscipit auctor cursus. Sed tempus elit vel dui
+                    scelerisque dignissim. Aenean ut urna et lorem vestibulum
+                    dignissim. Suspendisse pretium purus feugiat, posuere augue
+                    in, condimentum justo. Integer imperdiet nunc condimentum
+                    consequat consequat.
+                  </p>
+                  <p>
+                    <b>Impulsamos tu negocio a través de:</b>
+                  </p>
+                  <div className="desplegables">
+                    <Fade left>
+                      {SERVICIOS_AUDIOVISUAL.map((servicio) => (
+                        <Desplegable
+                          key={servicio.key}
+                          id={servicio.id}
+                          titulo={servicio.titulo}
+                          texto={servicio.texto}
+                        />
+                      ))}
+                    </Fade>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
             <div className="servicio">
-              <div className="izquierda">
-                <div className="nombre">
-                  Diseño y Desarrollo Web / E-Commerce
+              <Fade right>
+                <div className="izquierda">
+                  <div className="nombre">
+                    Diseño y Desarrollo Web / E-Commerce
+                  </div>
+                  <div className="boton-2">
+                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+                  </div>
                 </div>
-                <div className="boton-2">
-                  <button onClick={goToContacto}>CONTÁCTANOS</button>
-                </div>
-              </div>
 
-              <div className="derecha">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore dolore magna aliqua. Etiam
-                  suscipit auctor cursus. Sed tempus elit vel dui scelerisque
-                  dignissim. Aenean ut urna et lorem vestibulum dignissim.
-                  Suspendisse pretium purus feugiat, posuere augue in,
-                  condimentum justo. Integer imperdiet nunc condimentum
-                  consequat consequat.
-                </p>
-                <p>
-                  <b>Impulsamos tu negocio a través de:</b>
-                </p>
-                <div className="desplegables">
-                  {SERVICIOS_DISENO.map((servicio) => (
-                    <Desplegable
-                      key={servicio.key}
-                      id={servicio.id}
-                      titulo={servicio.titulo}
-                      texto={servicio.texto}
-                    />
-                  ))}
+                <div className="derecha">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    Etiam suscipit auctor cursus. Sed tempus elit vel dui
+                    scelerisque dignissim. Aenean ut urna et lorem vestibulum
+                    dignissim. Suspendisse pretium purus feugiat, posuere augue
+                    in, condimentum justo. Integer imperdiet nunc condimentum
+                    consequat consequat.
+                  </p>
+                  <p>
+                    <b>Impulsamos tu negocio a través de:</b>
+                  </p>
+                  <div className="desplegables">
+                    <Fade right>
+                      {SERVICIOS_DISENO.map((servicio) => (
+                        <Desplegable
+                          key={servicio.key}
+                          id={servicio.id}
+                          titulo={servicio.titulo}
+                          texto={servicio.texto}
+                        />
+                      ))}
+                    </Fade>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
           </div>
         </div>
@@ -268,78 +296,80 @@ function App() {
         <div className="container">
           <div className="titulo">PAQUETES</div>
           <div className="paquetes-info">
-            <div className="paquete">
-              <div className="nombre">PAQUETE 1</div>
-              <div className="precio">$ 10,000 MXN / mes</div>
-              <div className="linea"></div>
-              <div className="descripcion">
-                Lorem ipsum dolor sit amet consectetur. Lectus interdum lectus
-                facilisis arcu turpis tellus. Purus pulvinar gravida purus nulla
-                viverra vulputate cras gravida est.
+            <Fade left>
+              <div className="paquete">
+                <div className="nombre">PAQUETE 1</div>
+                <div className="precio">$ 10,000 MXN / mes</div>
+                <div className="linea"></div>
+                <div className="descripcion">
+                  Lorem ipsum dolor sit amet consectetur. Lectus interdum lectus
+                  facilisis arcu turpis tellus. Purus pulvinar gravida purus
+                  nulla viverra vulputate cras gravida est.
+                </div>
+                <div className="caracteristicas">
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 1. Lorem ipsum dolor sit.
+                  </p>
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 2. Lorem ipsum dolor sit.
+                  </p>
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 3. Lorem ipsum dolor sit.
+                  </p>
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 4. Lorem ipsum dolor sit.
+                  </p>
+                </div>
               </div>
-              <div className="caracteristicas">
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 1. Lorem ipsum dolor sit.
-                </p>
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 2. Lorem ipsum dolor sit.
-                </p>
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 3. Lorem ipsum dolor sit.
-                </p>
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 4. Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
+            </Fade>
             <div className="paquete">
               <div className="nombre">PAQUETE 2</div>
               <div className="precio">$ 12,000 MXN / mes</div>
@@ -412,138 +442,144 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="paquete">
-              <div className="nombre">PAQUETE 3</div>
-              <div className="precio">$ 8,000 MXN / mes</div>
-              <div className="linea"></div>
-              <div className="descripcion">
-                Lorem ipsum dolor sit amet consectetur. Lectus interdum lectus
-                facilisis arcu turpis tellus. Purus pulvinar gravida purus nulla
-                viverra vulputate cras gravida est.
+            <Fade right>
+              <div className="paquete">
+                <div className="nombre">PAQUETE 3</div>
+                <div className="precio">$ 8,000 MXN / mes</div>
+                <div className="linea"></div>
+                <div className="descripcion">
+                  Lorem ipsum dolor sit amet consectetur. Lectus interdum lectus
+                  facilisis arcu turpis tellus. Purus pulvinar gravida purus
+                  nulla viverra vulputate cras gravida est.
+                </div>
+                <div className="caracteristicas">
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 1. Lorem ipsum dolor sit.
+                  </p>
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 2. Lorem ipsum dolor sit.
+                  </p>
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 3. Lorem ipsum dolor sit.
+                  </p>
+                  <p>
+                    <span className="icono">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        height="14px"
+                        fill="currentColor"
+                        className="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                      </svg>
+                    </span>
+                    Item 4. Lorem ipsum dolor sit.
+                  </p>
+                </div>
               </div>
-              <div className="caracteristicas">
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 1. Lorem ipsum dolor sit.
-                </p>
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 2. Lorem ipsum dolor sit.
-                </p>
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 3. Lorem ipsum dolor sit.
-                </p>
-                <p>
-                  <span className="icono">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      height="14px"
-                      fill="currentColor"
-                      className="bi bi-check-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                    </svg>
-                  </span>
-                  Item 4. Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
+            </Fade>
           </div>
         </div>
-        <div className="boton">
-          <a href="/">CUÉNTANOS TUS NECESIDADES</a>
-        </div>
+        <Fade right>
+          <div className="boton">
+            <a href="/">CUÉNTANOS TUS NECESIDADES</a>
+          </div>
+        </Fade>
       </div>
       <div className="proyectos" id="proyectos">
         <div className="container">
           <div className="cajas-proyectos">
-            <div className="caja-izquierda">
-              <div className="texto">PROYECTOS</div>
-              <div className="texto-2">
-                Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed{" "}
-                <br></br>
-                do eiusmod tempor incididunt ut labore dolore magna aliqua.{" "}
-                <br></br>
-                Etiam suscipit auctor cursus.<br></br>
-                <div className="boton">
-                  <button onClick={goToContacto}>CONTÁCTANOS</button>
+            <Fade right>
+              <div className="caja-izquierda">
+                <div className="texto">PROYECTOS</div>
+                <div className="texto-2">
+                  Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed{" "}
+                  <br></br>
+                  do eiusmod tempor incididunt ut labore dolore magna aliqua.{" "}
+                  <br></br>
+                  Etiam suscipit auctor cursus.<br></br>
+                  <div className="boton">
+                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+                  </div>
+                </div>
+                <div className="flechas">
+                  <div className="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      fill="currentColor"
+                      className="bi bi-arrow-left-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      fill="currentColor"
+                      className="bi bi-arrow-right-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <div className="flechas">
-                <div className="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    fill="currentColor"
-                    className="bi bi-arrow-left-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
-                    />
-                  </svg>
+              <div className="caja-derecha">
+                <div className="proyecto-img">
+                  <img src="img/cbd-img.png" alt="cbd" />
                 </div>
-                <div className="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    fill="currentColor"
-                    className="bi bi-arrow-right-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-                    />
-                  </svg>
-                </div>
+                <div className="contador">01/08</div>
               </div>
-            </div>
-            <div className="caja-derecha">
-              <div className="proyecto-img">
-                <img src="img/cbd-img.png" alt="cbd" />
-              </div>
-              <div className="contador">01/08</div>
-            </div>
+            </Fade>
           </div>
         </div>
       </div>
@@ -551,46 +587,54 @@ function App() {
         <div className="container">
           <div className="nosotros-cajas">
             <div className="caja-izquierda">
-              <div className="nosotros-img">
-                <img src="img/rectangle.png" alt="rectangle" />
-              </div>
+              <Fade right>
+                <div className="nosotros-img">
+                  <img src="img/rectangle.png" alt="rectangle" />
+                </div>
+              </Fade>
             </div>
-            <div className="caja-derecha">
-              <div className="titulo">Nosotros</div>
-              <div className="texto">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore dolore magna aliqua. Etiam
-                  suscipit auctor cursus. Sed tempus elit vel dui scelerisque
-                  dignissim. Aenean ut urna et lorem vestibulum dignissim.
-                  Suspendisse pretium purus feugiat, posuere augue in,
-                  condimentum justo. Integer imperdiet nunc condimentum
-                  consequat consequat.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore dolore magna aliqua. Etiam
-                  suscipit auctor cursus. Sed tempus scelerisque dignissim.
-                  Aenean ut urna et lorem vestibulum dignissim. Suspendisse
-                  pretium purus feugiat.
-                </p>
+            <Fade left>
+              <div className="caja-derecha">
+                <div className="titulo">Nosotros</div>
+                <div className="texto">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    Etiam suscipit auctor cursus. Sed tempus elit vel dui
+                    scelerisque dignissim. Aenean ut urna et lorem vestibulum
+                    dignissim. Suspendisse pretium purus feugiat, posuere augue
+                    in, condimentum justo. Integer imperdiet nunc condimentum
+                    consequat consequat.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    Etiam suscipit auctor cursus. Sed tempus scelerisque
+                    dignissim. Aenean ut urna et lorem vestibulum dignissim.
+                    Suspendisse pretium purus feugiat.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Fade>
           </div>
         </div>
       </div>
       <div className="clientes">
         <div className="container">
           <div className="caja-clientes">
-            <div className="caja-izquierda">
-              <div className="texto">
-                EMPRESAS QUE <br></br>HAN CONFIADO <br></br>EN NOSOTROS
+            <Fade left>
+              <div className="caja-izquierda">
+                <div className="texto">
+                  EMPRESAS QUE <br></br>HAN CONFIADO <br></br>EN NOSOTROS
+                </div>
               </div>
-            </div>
+            </Fade>
             <div className="caja-derecha">
-              <div className="nosotros-img">
-                <img src="img/clientes.png" alt="clientes" />
-              </div>
+              <Fade right>
+                <div className="nosotros-img">
+                  <img src="img/clientes.png" alt="clientes" />
+                </div>
+              </Fade>
             </div>
           </div>
         </div>
@@ -598,29 +642,32 @@ function App() {
       <div className="contacto" id="contacto">
         <div className="container">
           <div className="caja-contacto">
-            <div className="caja-izquierda">
-              <div className="formulario">
-                <form>
-                  <input type="text" placeholder="NOMBRE" />
-                  <input type="text" placeholder="TELÉFONO" />
-                  <input type="text" placeholder="EMAIL" />
-                  <input type="text" placeholder="MENSAJE" />
-                </form>
+            <Fade left>
+              <div className="caja-izquierda">
+                <div className="formulario">
+                  <form>
+                    <input type="text" placeholder="NOMBRE" />
+                    <input type="text" placeholder="TELÉFONO" />
+                    <input type="text" placeholder="EMAIL" />
+                    <input type="text" placeholder="MENSAJE" />
+                  </form>
+                </div>
+                <div className="boton">
+                  <a href="/">ENVIAR MENSAJE</a>
+                </div>
               </div>
-              <div className="boton">
-                <a href="/">ENVIAR MENSAJE</a>
+            </Fade> <Fade right>
+              <div className="caja-derecha">
+                <div className="titulo">¿HABLAMOS?</div>
+                <div className="texto">
+                  <p>
+                    Ponte en contacto con nosotros y juntos <br></br>
+                    desarrollemos la mejor estrategia de <br></br>marketing para
+                    impulsar tu proyecto.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="caja-derecha">
-              <div className="titulo">¿HABLAMOS?</div>
-              <div className="texto">
-                <p>
-                  Ponte en contacto con nosotros y juntos <br></br>desarrollemos
-                  la mejor estrategia de <br></br>marketing para impulsar tu
-                  proyecto.
-                </p>
-              </div>
-            </div>
+            </Fade>
           </div>
         </div>
       </div>
