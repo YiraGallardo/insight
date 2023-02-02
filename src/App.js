@@ -135,9 +135,7 @@ function App() {
           <div className="logo">
             <img src="img/logo.png" alt="img" />
           </div>
-        </div> <div className="right"> <div className="hamburguesa">
-            <div className="linea"></div>
-            <div className="linea"></div>
+        </div> <div className="right"> <div className="hamburguesa"> <div className="linea"></div> <div className="linea"></div>
             <div className="linea"></div>
           </div>
         </div>
